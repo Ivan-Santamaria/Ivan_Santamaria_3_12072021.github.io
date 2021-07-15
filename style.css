@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.header__logo, h1 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: normal;
+}
+
+h2, h3, h4, h5, h6, li, div, span, a {
+  font-family: "Roboto", "sans-serif";
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.geoloc {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.geoloc .geoloc__icon {
+  padding: 0.2em;
+}/*# sourceMappingURL=style.css.map */

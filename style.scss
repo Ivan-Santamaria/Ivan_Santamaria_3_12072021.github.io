@@ -1,0 +1,21 @@
+@import "./sass/base/typography";
+
+#header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.geoloc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+   
+   .geoloc__icon {
+        padding: 0.2em;
+    }
+}
