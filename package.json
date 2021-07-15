@@ -1,0 +1,22 @@
+{
+  "name": "ivan_santamaria_3_12072021.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivan-Santamaria/Ivan_Santamaria_3_12072021.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan-Santamaria/Ivan_Santamaria_3_12072021.github.io/issues"
+  },
+  "homepage": "https://github.com/Ivan-Santamaria/Ivan_Santamaria_3_12072021.github.io#readme",
+  "dependencies": {
+    "sass": "^1.35.2"
+  }
+}
