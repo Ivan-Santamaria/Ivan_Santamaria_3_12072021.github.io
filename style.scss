@@ -1,4 +1,9 @@
 @import "./sass/base/typography";
+@import "./sass/utils/variables";
+
+body{
+    margin: 0px;
+}
 
 #header {
     display: flex;
@@ -18,4 +23,28 @@
    .geoloc__icon {
         padding: 0.2em;
     }
+}
+.loader
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;  
+    opacity: 100%;
+    font-size: 10em;
+    text-shadow: 0 0 7px;
+        .loader__point
+        {
+            color: $color-primary;
+        }
+        .loader__point--pink
+        {
+            color: $color-secondary;
+        }
+        .loader__point--green
+        {
+            color: $color-tertiary;
+        }
 }
