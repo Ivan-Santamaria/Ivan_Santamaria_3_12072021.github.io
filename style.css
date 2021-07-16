@@ -10,8 +10,7 @@ h2, h3, h4, h5, h6, li, div, span, a {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
 }
 
 #header {
@@ -28,6 +27,9 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(0deg, #f3f3f3, white 100%);
+  box-shadow: 0px 0px 7px 0px;
 }
 .geoloc .geoloc__icon {
   padding: 0.2em;
@@ -43,7 +45,6 @@ body {
   opacity: 100%;
   font-size: 10em;
   text-shadow: 0 0 7px;
-  animation: flash ;
 }
 .loader .loader__point {
   color: #9356DC;
@@ -53,4 +54,155 @@ body {
 }
 .loader .loader__point--green {
   color: #99e2d0;
+}
+
+.home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding-bottom: 2em;
+}
+.home .home__title {
+  font-size: 2.2em;
+}
+.home .home__subtitle {
+  font-size: 1.3em;
+}
+.home .home__btn {
+  border: 0;
+  padding: 0.75em 1.5em;
+  font-weight: 500;
+  font-size: 1.1em;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC, #ff79da);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.home .home__btn:hover {
+  transform: scale(105%);
+  -webkit-transform: scale(105%);
+  -moz-transform: scale(105%);
+  -ms-transform: scale(105%);
+  -o-transform: scale(105%);
+}
+
+.howto {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+.howto .howto__steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.howto__step {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  background: #f3f3f3;
+  padding-right: 3em;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
+  border-radius: 10px;
+  box-shadow: 1px 2px 4px 0;
+}
+.howto__step .howto__numbers {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  margin-left: -0.5em;
+  background: #9356DC;
+  color: white;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+.howto__step .howto__icon {
+  padding-right: 1em;
+}
+
+.restaurant {
+  background-color: #f3f3f3;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+.restaurant .restaurant__title {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  padding-left: 5.55%;
+}
+
+.restaurant__cards {
+  padding-left: 10%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 2em;
+  grid-template-rows: 18em 18em;
+  grid-row-gap: 2em;
+}
+.restaurant__cards .card {
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  box-shadow: 3px 2px 5px 0;
+}
+.restaurant__cards .card__img {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bubble__new {
+  background-color: #99e2d0;
+  margin-top: 2%;
+  position: absolute;
+  margin-left: -11%;
+  padding: 0.3em;
+  border-radius: 5px;
+  box-shadow: 1px 1px 12px 0 #99e2d0;
+}
+
+.card__badge {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
+.card__badge .photoinfos {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  padding-top: 1em;
+  padding-left: 10%;
+  background-color: #353535;
+  color: white;
+}
+.footer h4 {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */
