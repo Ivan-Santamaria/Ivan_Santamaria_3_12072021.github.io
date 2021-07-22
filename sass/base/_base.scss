@@ -1,0 +1,99 @@
+
+@mixin body_margin {
+    margin: 0;
+    padding:0;
+  }
+
+@mixin header_setup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+@mixin footer_setup
+{
+    padding-left: 7em;
+    padding-bottom: 1em;
+    background-color: $color-footer;
+    color: white;
+    
+        h4
+        {
+            font-family: $logo-title-font;
+            font-size: 1.2em;
+            padding-top: 1em;
+        }
+
+        &__list
+            {   
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                align-content: flex-start;
+                padding: 0%;
+
+                
+            }
+            &__listelmt
+                {
+             
+                   
+                    padding-bottom: 0.6em;
+                    
+                   
+                }    
+                
+        &__link
+        {
+            text-decoration: none;
+            color: white;
+            padding-right: 1em;
+
+            &:hover
+            {
+                text-decoration: underline;
+            }
+
+            &:visited
+            {
+                color: white;
+            }
+        }
+
+        &__icon
+        {
+            padding-right: 0.5em;
+        }
+    }
+
+@mixin loader_setup 
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    font-size: 10em;
+    text-shadow: 0 0 7px;
+
+         .loader__point
+        {
+            color: $color-primary;
+        }
+        .loader__point--pink
+        {
+            color: $color-secondary;
+        }
+        .loader__point--green
+        {
+            color: $color-tertiary;
+        }    
+}
+    
+

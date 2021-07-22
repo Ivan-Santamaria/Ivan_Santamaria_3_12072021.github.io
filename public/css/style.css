@@ -10,10 +10,11 @@ h2, h3, h4, h5, h6, li, div, span, a {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-#header {
+.header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -74,6 +75,7 @@ body {
   font-size: 1.3em;
 }
 .home .home__btn {
+  text-decoration: none;
   border: 0;
   padding: 0.75em 1.5em;
   font-weight: 500;
@@ -98,6 +100,15 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 5%;
+}
+.howto .howto__title {
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: baseline;
 }
 .howto .howto__steps {
   display: flex;
@@ -138,9 +149,14 @@ body {
   padding-bottom: 5%;
 }
 .restaurant .restaurant__title {
-  padding-top: 3%;
-  padding-bottom: 2%;
-  padding-left: 5.55%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
 }
 
 .restaurant__cards {
@@ -169,41 +185,60 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.restaurant__cards .photoinfos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding-left: 1rem;
+}
 
 .bubble__new {
   background-color: #99e2d0;
-  margin-top: 2%;
+  top: 3%;
+  right: 2%;
   position: absolute;
-  margin-left: -11%;
   padding: 0.3em;
   border-radius: 5px;
   box-shadow: 1px 1px 12px 0 #99e2d0;
 }
 
-.card__badge {
-  background-color: #99e2d0;
-  color: #1b6150;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
-  position: absolute;
-  top: 1rem;
-  right: 0.75rem;
-}
-.card__badge .photoinfos {
-  padding: 1rem;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 .footer {
-  padding-top: 1em;
-  padding-left: 10%;
+  padding-left: 7em;
   padding-bottom: 1em;
   background-color: #353535;
   color: white;
 }
 .footer h4 {
   font-family: "Shrikhand", "cursive";
-  font-size: 1.5em;
+  font-size: 1.2em;
+  padding-top: 1em;
+}
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0%;
+}
+.footer__listelmt {
+  padding-bottom: 0.6em;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+  padding-right: 1em;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__link:visited {
+  color: white;
+}
+.footer__icon {
+  padding-right: 0.5em;
 }/*# sourceMappingURL=style.css.map */
