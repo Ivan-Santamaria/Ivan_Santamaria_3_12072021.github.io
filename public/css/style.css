@@ -215,6 +215,7 @@ body {
   font-family: "Shrikhand", "cursive";
   font-size: 1.2em;
   padding-top: 1em;
+  margin: 0%;
 }
 .footer__list {
   list-style: none;
