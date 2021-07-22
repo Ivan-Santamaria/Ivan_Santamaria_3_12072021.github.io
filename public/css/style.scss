@@ -1,5 +1,5 @@
-@import "./sass/base/typography";
-@import "./sass/utils/variables";
+@import "/Users/ivansantamaria/Documents/Cours_Dev/ProjetsLivrables /P3_santamaria_Ivan/Ivan_Santamaria_3_12072021.github.io/sass/base/_typography.scss";
+@import "/Users/ivansantamaria/Documents/Cours_Dev/ProjetsLivrables /P3_santamaria_Ivan/Ivan_Santamaria_3_12072021.github.io/sass/utils/_variables.scss";
 
 body{
     margin: 0px;
@@ -220,6 +220,7 @@ body{
 {
     padding-top: 1em;
     padding-left: 10%;
+    padding-bottom: 1em;
     background-color: $color-footer;
     color: white;
     
