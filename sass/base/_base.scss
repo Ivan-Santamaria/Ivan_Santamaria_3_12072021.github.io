@@ -1,4 +1,7 @@
 
+
+
+
 @mixin body_margin {
     margin: 0;
     padding:0;
@@ -10,6 +13,36 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: baseline;
+
+    &--backarrow
+    {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-right: 45%;
+    padding-left: 5%;
+    }
+
+    &__arrow
+    {
+        color: black;
+        font-size: x-large;
+
+        &:visited
+        {
+            text-decoration: none;
+        }
+        &:hover
+        {
+            transform: scale(110%);
+            -webkit-transform: scale(110%);
+            -moz-transform: scale(110%);
+            -ms-transform: scale(110%);
+            -o-transform: scale(110%);
+}
+    }
 }
 
 @mixin footer_setup
@@ -98,3 +131,11 @@
 }
     
 
+@mixin restaurantbackground
+
+   {
+       width: 100%;
+       max-width: 100%;
+       object-fit: cover;
+       height: 32em;
+   }

@@ -1,5 +1,9 @@
 @import "../../sass/main";
 
+
+
+/*Index.html*/
+
 body{
     @include body_margin; 
 }
@@ -73,6 +77,10 @@ body{
                             -o-transform: scale(105%);
                         }
                     }
+}
+.restaurantbackground
+{
+@include restaurantbackground;
 }
 
 .howto

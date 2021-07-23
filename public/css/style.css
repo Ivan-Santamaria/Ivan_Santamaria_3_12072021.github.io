@@ -9,6 +9,7 @@ h2, h3, h4, h5, h6, li, div, span, a {
   font-family: "Roboto", "sans-serif";
 }
 
+/*Index.html*/
 body {
   margin: 0;
   padding: 0;
@@ -20,6 +21,29 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: baseline;
+}
+.header--backarrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-right: 45%;
+  padding-left: 5%;
+}
+.header__arrow {
+  color: black;
+  font-size: x-large;
+}
+.header__arrow:visited {
+  text-decoration: none;
+}
+.header__arrow:hover {
+  transform: scale(110%);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
 }
 
 .geoloc {
@@ -94,6 +118,14 @@ body {
   -moz-transform: scale(105%);
   -ms-transform: scale(105%);
   -o-transform: scale(105%);
+}
+
+.restaurantbackground {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 32em;
 }
 
 .howto {
