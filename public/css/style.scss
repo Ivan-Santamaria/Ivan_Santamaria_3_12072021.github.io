@@ -78,10 +78,6 @@ body{
                         }
                     }
 }
-.restaurantbackground
-{
-@include restaurantbackground;
-}
 
 .howto
 {
@@ -215,4 +211,25 @@ body{
 .footer
 {
     @include footer_setup;
+    }
+
+
+    .restaurantbackground
+    {
+    @include restaurantbackground;
+    }
+
+    .menubox
+    {
+        @include menubox;
+    }
+
+ .menucard
+ {
+     @include menucard;
+ }
+
+    .selection
+    {
+        @include selection;
     }

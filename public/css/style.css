@@ -120,14 +120,6 @@ body {
   -o-transform: scale(105%);
 }
 
-.restaurantbackground {
-  width: 100%;
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 32em;
-}
-
 .howto {
   padding-left: 10%;
   padding-right: 10%;
@@ -274,4 +266,45 @@ body {
 }
 .footer__icon {
   padding-right: 0.5em;
+}
+
+.restaurantbackground {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 32em;
+}
+
+.menubox {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.menucard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 10% 30% 30% 30%;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+}
+
+.selection {
+  background: white;
+  box-shadow: 2px 2px 8px 0;
+  border-radius: 1em;
+  padding: 1em;
+}
+.selection:hover {
+  cursor: pointer;
+  transform: scale(110%);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
 }/*# sourceMappingURL=style.css.map */

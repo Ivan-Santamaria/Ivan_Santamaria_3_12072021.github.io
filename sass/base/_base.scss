@@ -139,3 +139,49 @@
        object-fit: cover;
        height: 32em;
    }
+
+   @mixin menubox
+    {
+            margin-top: -4rem;
+            border-radius: 2rem 2rem 0 0;
+            background-color: #f6f6f6;
+            z-index: 1;
+            position: relative;
+            margin-left: 15%;
+            margin-right: 15%;
+   }
+
+   @mixin menucard {
+   
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10% 30% 30% 30%;
+        grid-row-gap: 1em;
+        grid-column-gap: 1em;
+   }
+
+   @mixin menucardtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;       
+   }
+
+   @mixin selection {
+    background: white;
+    box-shadow: 2px 2px 8px 0;
+    border-radius: 1em;
+    padding: 1em;
+    
+    &:hover
+    {
+        cursor: pointer;
+        transform: scale(110%);
+        -webkit-transform: scale(110%);
+        -moz-transform: scale(110%);
+        -ms-transform: scale(110%);
+        -o-transform: scale(110%);
+}
+   }
