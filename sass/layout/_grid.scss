@@ -2,9 +2,8 @@
 @mixin menucard_grid {    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 12% 22% 22% 22% 22%;
-    grid-row-gap: 1.5em;
-    grid-column-gap: 1.2em;
+    grid-row-gap: 2em;
+    grid-column-gap: 1em;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 5%;
