@@ -301,8 +301,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 12% 22% 22% 22% 22%;
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
   padding-left: 2%;
   padding-right: 2%;
   padding-bottom: 5%;
