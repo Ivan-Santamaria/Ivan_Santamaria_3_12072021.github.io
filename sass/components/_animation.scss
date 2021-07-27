@@ -1,0 +1,14 @@
+
+
+@mixin animation_foodcard {
+    &:hover
+    { 
+    cursor: pointer;
+    transform: scale(105%);
+    -webkit-transform: scale(105%);
+    -moz-transform: scale(105%);
+    -ms-transform: scale(105%);
+    -o-transform: scale(105%);
+    transition-duration: 500ms;
+}
+}

@@ -53,29 +53,9 @@ body{
             {
                 font-size: 1.3em;
             }
-                .home__btn /* creer un component */
+                .btn__home/* creer un component */
                     {
-                        text-decoration: none;
-                        border: 0;
-                        padding: .75em 1.5em;
-                        font-weight: 500;
-                        font-size: 1.1em;
-                        border-radius: 100px;
-                        color: #fff;
-                        background-color: #686868;
-                        background-image: linear-gradient(0deg,$color-primary,$color-secondary);
-                        cursor: pointer;
-                        transition-duration: .25s;
-                        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-
-                        &:hover
-                        {
-                            transform: scale(105%);
-                            -webkit-transform: scale(105%);
-                            -moz-transform: scale(105%);
-                            -ms-transform: scale(105%);
-                            -o-transform: scale(105%);
-                        }
+                      @include mainbutton
                     }
 }
 
@@ -216,20 +196,50 @@ body{
 
     .restaurantbackground
     {
-    @include restaurantbackground;
+    @include restaurant_background;
     }
 
     .menubox
     {
         @include menubox;
+
+        .menubox__title {
+            padding-right: 2%;
+            padding-left: 2%;
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
     }
 
- .menucard
+ .menucard /*Grid*/
  {
-     @include menucard;
- }
+    @include menucard_grid;
 
-    .selection
+    .menucard__title
     {
-        @include selection;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: $color-tertiary 0.2em solid;
     }
+ }
+ 
+ 
+
+ .btn__order
+ {
+    
+        padding-top: 5%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: baseline;
+        .btn__main
+        {
+            @include mainbutton
+        }
+ }
+  

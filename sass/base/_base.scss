@@ -131,7 +131,7 @@
 }
     
 
-@mixin restaurantbackground
+@mixin restaurant_background
 
    {
        width: 100%;
@@ -149,39 +149,49 @@
             position: relative;
             margin-left: 15%;
             margin-right: 15%;
+            padding-bottom: 5%;
    }
-
-   @mixin menucard {
-   
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 10% 30% 30% 30%;
-        grid-row-gap: 1em;
-        grid-column-gap: 1em;
-   }
-
-   @mixin menucardtitle {
+   @mixin menucard_title {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     padding-left: 2%;
-    padding-right: 2%;       
+    padding-right: 2%;     
+    
+   
    }
 
-   @mixin selection {
-    background: white;
-    box-shadow: 2px 2px 8px 0;
-    border-radius: 1em;
-    padding: 1em;
-    
-    &:hover
+   @mixin menucard_bubble
     {
-        cursor: pointer;
-        transform: scale(110%);
-        -webkit-transform: scale(110%);
-        -moz-transform: scale(110%);
-        -ms-transform: scale(110%);
-        -o-transform: scale(110%);
-}
+        @include animation_foodcard;
+            background: white;
+            border: 0.1em solid white;
+            border-radius: 10px 10px;
+            box-shadow: 3px 3px 6px 0;
+          
+
+            .menucard__text
+            {
+                padding: 2%;
+            }
+            .menucard__subtext
+            {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                padding-top: 2%;
+            }
+            .menucard__name
+            {
+                font-weight: bold;
+            }
+            .menucard__price
+            {
+                font-weight: bold;
+            }
    }
+  
+
+   
+ 
