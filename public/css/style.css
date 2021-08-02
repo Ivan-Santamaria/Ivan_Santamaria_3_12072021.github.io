@@ -339,6 +339,7 @@ body {
 }
 .menucard .selection__starter--1 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__starter--2 {
   grid-area: 3/1/4/2;
@@ -370,6 +371,7 @@ body {
 }
 .menucard .selection__starter--2 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__starter--3 {
   grid-area: 4/1/5/2;
@@ -401,6 +403,39 @@ body {
 }
 .menucard .selection__starter--3 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
+}
+.menucard .selection__starter--3add {
+  grid-area: 5/1/6/2;
+  background: white;
+  border: 0.1em solid white;
+  border-radius: 10px 10px;
+  box-shadow: 3px 3px 6px 0;
+}
+.menucard .selection__starter--3add:hover {
+  cursor: pointer;
+  transform: scale(105%);
+  -webkit-transform: scale(105%);
+  -moz-transform: scale(105%);
+  -ms-transform: scale(105%);
+  -o-transform: scale(105%);
+  transition-duration: 500ms;
+}
+.menucard .selection__starter--3add .menucard__text {
+  padding: 2%;
+}
+.menucard .selection__starter--3add .menucard__subtext {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 2%;
+}
+.menucard .selection__starter--3add .menucard__name {
+  font-weight: bold;
+}
+.menucard .selection__starter--3add .menucard__price {
+  font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__maincourse {
   grid-area: 1/2/2/3;
@@ -435,6 +470,7 @@ body {
 }
 .menucard .selection__maincourse--1 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__maincourse--2 {
   grid-area: 3/2/4/3;
@@ -466,6 +502,7 @@ body {
 }
 .menucard .selection__maincourse--2 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__maincourse--3 {
   grid-area: 4/2/5/3;
@@ -497,37 +534,7 @@ body {
 }
 .menucard .selection__maincourse--3 .menucard__price {
   font-weight: bold;
-}
-.menucard .selection__starter--3add {
-  grid-area: 5/1/6/2;
-  background: white;
-  border: 0.1em solid white;
-  border-radius: 10px 10px;
-  box-shadow: 3px 3px 6px 0;
-}
-.menucard .selection__starter--3add:hover {
-  cursor: pointer;
-  transform: scale(105%);
-  -webkit-transform: scale(105%);
-  -moz-transform: scale(105%);
-  -ms-transform: scale(105%);
-  -o-transform: scale(105%);
-  transition-duration: 500ms;
-}
-.menucard .selection__starter--3add .menucard__text {
-  padding: 2%;
-}
-.menucard .selection__starter--3add .menucard__subtext {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  padding-top: 2%;
-}
-.menucard .selection__starter--3add .menucard__name {
-  font-weight: bold;
-}
-.menucard .selection__starter--3add .menucard__price {
-  font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__dessert {
   grid-area: 1/3/2/4;
@@ -562,6 +569,7 @@ body {
 }
 .menucard .selection__dessert--1 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__dessert--2 {
   grid-area: 3/3/4/4;
@@ -593,6 +601,7 @@ body {
 }
 .menucard .selection__dessert--2 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .selection__dessert--3 {
   grid-area: 4/3/5/4;
@@ -624,6 +633,7 @@ body {
 }
 .menucard .selection__dessert--3 .menucard__price {
   font-weight: bold;
+  padding-left: 1%;
 }
 .menucard .menucard__title {
   font-size: 1.2em;
@@ -658,4 +668,152 @@ body {
   -moz-transform: scale(105%);
   -ms-transform: scale(105%);
   -o-transform: scale(105%);
+}
+
+@media all and (max-width: 1200px) {
+  .howto .howto__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .howto .howto__steps .howto__step {
+    margin-bottom: 2%;
+  }
+
+  .howto__step .howto__icon {
+    padding-right: 1em;
+    padding-left: 38%;
+  }
+
+  .menubox {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .restaurantbackground {
+    height: 25em;
+  }
+
+  .menucard {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 2em;
+    grid-column-gap: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+  }
+  .menucard .selection__maincourse {
+    grid-area: 6/1/7/2;
+  }
+  .menucard .selection__maincourse--1 {
+    grid-area: 7/1/8/2;
+  }
+  .menucard .selection__maincourse--2 {
+    grid-area: 8/1/9/2;
+  }
+  .menucard .selection__maincourse--3 {
+    grid-area: 9/1/10/2;
+  }
+  .menucard .selection__dessert {
+    grid-area: 10/1/11/2;
+  }
+  .menucard .selection__dessert--1 {
+    grid-area: 11/1/12/2;
+  }
+  .menucard .selection__dessert--2 {
+    grid-area: 12/1/13/2;
+  }
+  .menucard .selection__dessert--3 {
+    grid-area: 13/1/14/2;
+  }
+
+  .footer {
+    padding-left: 5%;
+  }
+}
+@media all and (max-width: 768px) {
+  .howto__step .howto__icon {
+    padding-right: 1em;
+    padding-left: 30%;
+  }
+
+  .restaurant__cards {
+    padding-left: 0%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2em;
+    grid-template-rows: 18em 18em;
+    grid-row-gap: 2em;
+  }
+
+  .restaurantbackground {
+    height: 18em;
+  }
+
+  .menubox {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .footer {
+    padding-left: 2%;
+  }
+}
+@media all and (max-width: 375px) {
+  .home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding-bottom: 2em;
+    padding-left: 5%;
+    flex-direction: column;
+  }
+
+  .howto {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 5%;
+  }
+  .howto .howto__title {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .howto .howto__icon {
+    padding-right: 1em;
+    padding-left: 0%;
+  }
+
+  .restaurant {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 15%;
+  }
+  .restaurant .restaurant__title {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: baseline;
+  }
+
+  .restaurant__cards .photoinfos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding-left: 1rem;
+    padding-bottom: 0.5em;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -194,6 +194,10 @@ body{
     }
 
 
+
+
+
+
     .restaurantbackground
     {
     @include restaurant_background;
@@ -215,31 +219,54 @@ body{
         }
     }
 
- .menucard /*Grid*/
- {
-    @include menucard_grid;
-
-    .menucard__title
+    .menucard /*Grid*/
     {
-        font-size: 1.2em;
-        font-weight: bold;
-        border-bottom: $color-tertiary 0.2em solid;
+        @include menucard_grid;
+
+        .menucard__title
+        {
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: $color-tertiary 0.2em solid;
+        }
     }
- }
  
  
 
- .btn__order
- {
-    
-        padding-top: 5%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: baseline;
-        .btn__main
-        {
-            @include mainbutton
-        }
- }
+    .btn__order
+    {
+        
+            padding-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: baseline;
+            .btn__main
+            {
+                @include mainbutton
+            }
+    }
   
+
+
+
+
+
+
+ @media all and (max-width : 1200px)
+ {
+   @include display_1200px;
+
+ }
+
+ @media all and (max-width : 768px)
+
+ {
+    @include display_768px;
+ }
+
+ @media all and (max-width : 375px )
+
+ {
+     @include display_375px;
+ }
