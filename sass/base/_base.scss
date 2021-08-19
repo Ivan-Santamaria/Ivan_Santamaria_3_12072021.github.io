@@ -1,5 +1,17 @@
 
+@mixin loader_setup { position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    font-size: 10em;
+    text-shadow: 0 0 7px;
 
+    @include loader_animation
+    
+}
 
 
 @mixin body_margin {
@@ -103,34 +115,7 @@
             padding-right: 0.5em;
         }
     }
-
-@mixin loader_setup 
-{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
-    font-size: 10em;
-    text-shadow: 0 0 7px;
-
-         .loader__point
-        {
-            color: $color-primary;
-        }
-        .loader__point--pink
-        {
-            color: $color-secondary;
-        }
-        .loader__point--green
-        {
-            color: $color-tertiary;
-        }    
-}
-    
-
+ 
 @mixin restaurant_background
 
    {
