@@ -1,5 +1,5 @@
 
-@mixin loader_setup { position: absolute;
+@mixin loader_setup { position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,6 +8,7 @@
     opacity: 100%;
     font-size: 10em;
     text-shadow: 0 0 7px;
+    z-index: 9999;
 
     @include loader_animation
     
