@@ -16,25 +16,32 @@
 
 @mixin loader_animation
 {
-   
+  &.loader
+  {
+    animation: loader-background 7200s ;
+    -webkit-animation: loader-background 7200s ;
+    animation-iteration-count: 1;
+            
+  
     .loader__point
     {
         color: $color-primary;
-        animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
-        -webkit-animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
+        animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
+        -webkit-animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
+        
 }
     .loader__point--pink
     {
         color: $color-secondary;
-        animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
-        -webkit-animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
+        animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
+        -webkit-animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
         animation-delay: .20s;
 }
     .loader__point--green
     {
         color: $color-tertiary;
-        animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
-        -webkit-animation: loading-bounce 1.5s linear 0s infinite alternate-reverse both;
+        animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
+        -webkit-animation: loading-bounce 1.5s linear 0s 2 alternate-reverse both;
         animation-delay: .40s;
 }
 
@@ -129,4 +136,89 @@
         transform: translateY(0px);
       }
   }
+
+
+  @keyframes loader-background
+  {
+    0%
+      {
+        opacity: 1;
+      }
+      
+    0.05%
+      {
+       opacity: 0;
+       z-index: -9998;
+       display: none;
+      }
+
+      100%
+      {
+       opacity: 0; 
+        z-index: -999;
+       display: none;
+      }
+    }
+
+
+@-webkit-keyframes loader-background
+{
+  0%
+    {
+      opacity: 1;
+    }
+    
+  0.05%
+    {
+     opacity: 0;
+     z-index: -9999;
+     display: none;
+    }
+    100%
+    {
+     opacity: 0; 
+      z-index: -9999;
+     display: none;
+    }
+  }
+
+
+}
+}
+
+@mixin menucard-animation {
+
+  animation: menucard_animation_appear 1s linear 0.2s 1 ;
+
+
+
+@keyframes menucard_animation_appear {
+
+  0%
+  {
+    transform: scale(0);
+  }
+
+  100%
+  {
+    transform: scale(1);
+  }
+  
+}
+
+@-webkit-keyframes menucard_animation_appear {
+
+  0%
+  {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+}
 }

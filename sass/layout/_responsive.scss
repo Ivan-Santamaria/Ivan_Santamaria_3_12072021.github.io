@@ -1,126 +1,60 @@
-@mixin display_1200px {
+@mixin display_1024px {
    
 
     .howto .howto__steps {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        .howto__step {
-            margin-bottom: 2%;
-        }
-    }
-    .howto__step .howto__icon {
-        padding-right: 1em;
-        padding-left: 38%;
-    }    
-
-    .menubox{
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-    .restaurantbackground {
-
-        height: 25em;
-    }
-    .menucard
-    {
-     @include grid_responsive
-    }
-
-    .footer
-    {
-        padding-left: 5%;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
 
 
 @mixin display_768px {
-    .howto__step .howto__icon {
-        padding-right: 1em;
-        padding-left: 30%;
+    .howto{
+        padding-right: 1%;
     }
     
     .restaurant__cards {
-        padding-left: 0%;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-column-gap: 2em;
-        grid-template-rows: 18em 18em;
-        grid-row-gap: 2em;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 1em;
+        padding-bottom: 0em;
+            .card__1
+            {
+                grid-area: 1/1/2/2;
+
+            }
+            .card__2
+            {
+                grid-area: 1/2/2/3;
+            }
+            .card__3
+            {
+                grid-area: 2/1/2/2;
+            }
+            .card__4
+            {
+                grid-area: 2/2/3/3;
+            }
     }
 
-    .restaurantbackground {
-
-        height: 18em;
-    }
-
-    .menubox {
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-
-    .footer
-    {
-        padding-left: 2%;
-    }
-}
-
-@mixin display_375px {
-    .home {
-        position: relative;
-        display: flex;
-        align-items: center;
-        background-color: #f3f3f3;
-        padding-bottom: 2em;
-        padding-left: 5%;
-        flex-direction: column;
-    }
-
-    .howto 
-    {
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-bottom: 5%;
-        
-
-        .howto__title {
-            padding-bottom: 5%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: flex-start;
-            justify-content: center;
-            align-items: flex-start;
-        }
-        .howto__icon {
-            padding-right: 1em;
-            padding-left: 0%;
-        }
-     }
-     .restaurant 
-     {   padding-left: 3%;
-         padding-right: 3%;
-        padding-bottom: 15%;
-
-        .restaurant__title {
-            padding-top: 2%;
-            padding-bottom: 3%;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-content: center;
-            align-items: baseline;
-        }
-     }
-     .restaurant__cards .photoinfos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-        padding-left: 1rem;
+    .restaurant__cards .card {
         padding-bottom: 0.5em;
     }
+
+//     .restaurantbackground {
+
+//         height: 18em;
+//     }
+
+//     .menubox {
+//         margin-left: 0%;
+//         margin-right: 0%;
+//     }
+
+//     .footer
+//     {
+//         padding-left: 2%;
+//     }
 }
+
