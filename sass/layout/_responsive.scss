@@ -5,6 +5,10 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .menucard
+    {
+       @include  menucard_grid;
+    }
 }
 
 
@@ -41,20 +45,21 @@
     .restaurant__cards .card {
         padding-bottom: 0.5em;
     }
-
-//     .restaurantbackground {
-
-//         height: 18em;
-//     }
-
-//     .menubox {
-//         margin-left: 0%;
-//         margin-right: 0%;
-//     }
-
-//     .footer
-//     {
-//         padding-left: 2%;
-//     }
 }
+
+
+
+
+
+  @mixin display_1440px 
+  {
+    .restaurant__cards {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+
+  
+    }
+
 
