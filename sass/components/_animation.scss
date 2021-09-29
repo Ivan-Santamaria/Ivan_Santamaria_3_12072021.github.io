@@ -1,19 +1,8 @@
 
 
-@mixin animation_foodcard {
-    &:hover
-    { 
-    cursor: pointer;
-    transform: scale(105%);
-    -webkit-transform: scale(105%);
-    -moz-transform: scale(105%);
-    -ms-transform: scale(105%);
-    -o-transform: scale(105%);
-    transition-duration: 500ms;
-}
-}
 
 
+/* Loader Animation*/
 @mixin loader_animation
 {
   &.loader
@@ -186,9 +175,23 @@
 }
 }
 
+
+@mixin animation_foodcard {
+  
+  &:hover
+  { 
+    transform: scale(1.02);
+
+  }
+}
+
+/* Menucard Animation*/
 @mixin menucard-animation {
 
   animation: menucard_animation_appear 1s linear 0.2s 1 ;
+  transform: scale(0);
+  animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+  animation-fill-mode: both;
 
 
 
@@ -197,11 +200,13 @@
   0%
   {
     transform: scale(0);
+ 
   }
-
+  
   100%
   {
     transform: scale(1);
+
   }
   
 }
@@ -210,15 +215,27 @@
 
   0%
   {
-    opacity: 0;
     transform: scale(0);
   }
 
   100%
   {
-    opacity: 1;
     transform: scale(1);
   }
   
 }
+}
+
+
+ /*  Heart Animation*/
+@keyframes fill { 
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -29,21 +29,25 @@
     justify-content: center;
     align-items: baseline;
 
+   
+
     &--backarrow
     {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: baseline;
-        padding-right: 28%;
-        padding-left: 3%;
+        align-items: center;
     }
 
     &__arrow
     {
         color: black;
         font-size: x-large;
+    position: absolute;
+    right: 95%;
+    top: 4%;
+    left: 2%;
+
 
         &:visited
         {
@@ -51,12 +55,9 @@
         }
         &:hover
         {
-            transform: scale(110%);
-            -webkit-transform: scale(110%);
-            -moz-transform: scale(110%);
-            -ms-transform: scale(110%);
-            -o-transform: scale(110%);
-}
+            transform: scale(1.12);
+           cursor: pointer;
+        }
     }
 }
 
@@ -151,8 +152,14 @@
    }
 
    @mixin menucard_bubble
+   
     {
+
+       
+        
+
         @include animation_foodcard;
+   
 
             background: white;
             border: 0.1em solid white;
@@ -194,48 +201,59 @@
    }
    
  @mixin selection-appear {
+     /* Menucard Animation*/
     .selection__starter--1
     {
+        /* Menucard Animation*/
         @include menucard-animation;   
+        
     }
     .selection__starter--2
     {
+        /* Menucard Animation*/
         @include menucard-animation;
         animation-delay: 0.4s;    
     }
     .selection__starter--3
     {
+        /* Menucard Animation*/
         @include menucard-animation;
         animation-delay: 0.6s; 
     }
                             .selection__maincourse--1
                             {
+                                /* Menucard Animation*/
                                 @include menucard-animation;   
                                 animation-delay: 0.8s; 
                             }
                             .selection__maincourse--2
                             {
+                                /* Menucard Animation*/
                                 @include menucard-animation;
                                 animation-delay: 1s;    
                             }
                             .selection__maincourse--3
                             {
+                                /* Menucard Animation*/
                                 @include menucard-animation;
                                 animation-delay: 1.2s; 
                             }
 
                                                     .selection__dessert--1
                                                     {
+                                                        /* Menucard Animation*/
                                                         @include menucard-animation;   
                                                         animation-delay: 1.4s; 
                                                     }
                                                     .selection__dessert--2
                                                     {
+                                                        /* Menucard Animation*/
                                                         @include menucard-animation;
                                                         animation-delay: 1.6s;    
                                                     }
                                                     .selection__dessert--3
                                                     {
+                                                        /* Menucard Animation*/
                                                         @include menucard-animation;
                                                         animation-delay: 1.8s; 
                                                     }

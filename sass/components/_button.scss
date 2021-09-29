@@ -16,11 +16,13 @@
 
     &:hover
     {
-        transform: scale(105%);
-        -webkit-transform: scale(105%);
-        -moz-transform: scale(105%);
-        -ms-transform: scale(105%);
-        -o-transform: scale(105%);
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 50%);
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
     }
     
 }
@@ -29,8 +31,11 @@
 
 @mixin heart_empty {
 
+
+  
     &:hover
-    {animation: fill 0.3s ease-in-out;
+    {
+        animation: fill 0.5s ease-in-out;
         display: inline-block;
         opacity: 1;
         background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -39,16 +44,29 @@
         font-weight: bold;
     
     }
+    &:active
+  {
+    display: block;
+    opacity: 0.9;
+       
+  }
+
+   
 }
 
-@keyframes fill {
-    0% {
-      opacity: 0;
+
+
+@mixin btn_order
+    {
+        
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: baseline;
+            .btn__main
+            {
+                @include mainbutton
+            }
     }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+
+    
