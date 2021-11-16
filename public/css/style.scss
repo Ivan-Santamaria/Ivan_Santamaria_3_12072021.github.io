@@ -266,7 +266,7 @@ body{
         }
     }
 
-    .menucard /*Grid*/
+    .menucard 
     {
         @include grid_responsive;
         @include selection-appear;
