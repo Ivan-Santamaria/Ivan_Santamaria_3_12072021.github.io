@@ -1,260 +1,318 @@
+/* Page de Chargement */
+@mixin loader_setup 
+{ 
+position: fixed;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+opacity: 100%;
+font-size: 10em;
+text-shadow: 0 0 7px;
+z-index: 9999;
+background-color: #f6f6f6a8;    
+@include loader_animation
 
-@mixin loader_setup { position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    opacity: 100%;
-    font-size: 10em;
-    text-shadow: 0 0 7px;
-    z-index: 9999;
-    background-color: #f6f6f6a8;    
-    @include loader_animation
-   
-   
-    
 }
 
 
-@mixin body_margin {
-    margin: 0;
-    padding:0;
-  }
-
-@mixin header_setup {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: baseline;
-
-   
-
-    &--backarrow
-    {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-
-    &__arrow
-    {
-        color: black;
-        font-size: x-large;
-    position: absolute;
-    right: 95%;
-    top: 4%;
-    left: 2%;
-
-
-        &:visited
-        {
-            text-decoration: none;
-        }
-        &:hover
-        {
-            transform: scale(1.12);
-           cursor: pointer;
-        }
-    }
+/* Remise à zéro de l'affichage */
+@mixin body_margin 
+{
+margin: 0;
+padding:0;
 }
 
+
+/* Paramètre du header */
+@mixin header_setup 
+{
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: baseline;
+
+
+
+&--backarrow
+{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+}
+
+&__arrow
+{
+color: black;
+font-size: x-large;
+position: absolute;
+right: 95%;
+top: 4%;
+left: 2%;
+
+
+&:visited
+{
+text-decoration: none;
+}
+&:hover
+{
+transform: scale(1.12);
+cursor: pointer;
+}
+}
+}
+
+
+/* Paramètre du footer */
 @mixin footer_setup
 {
-    padding-left: 1.5em;
-    padding-bottom: 1em;
-    background-color: $color-footer;
-    color: white;
-    
-        h4
-        {
-            font-family: $logo-title-font;
-            font-size: 1.2em;
-            padding-top: 1em;
-            margin: 0%;
-        }
+padding-left: 1.5em;
+padding-bottom: 1em;
+background-color: $color-footer;
+color: white;
 
-        &__list
-            {   
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-items: flex-start;
-                align-content: flex-start;
-                padding: 0%;
+h4
+{
+font-family: $logo-title-font;
+font-size: 1.2em;
+padding-top: 1em;
+margin: 0%;
+}
 
-                
-            }
-            &__listelmt
-                {
-             
-                   
-                    padding-bottom: 0.6em;
-                    
-                   
-                }    
-                
-        &__link
-        {
-            text-decoration: none;
-            color: white;
-            padding-right: 1em;
-
-            &:hover
-            {
-                text-decoration: underline;
-            }
-
-            &:visited
-            {
-                color: white;
-            }
-        }
-
-        &__icon
-        {
-            padding-right: 0.5em;
-        }
-    }
- 
-@mixin restaurant_background
-
-   {
-       width: 100%;
-       max-width: 100%;
-       object-fit: cover;
-       height: 18em;
-   }
-
-   @mixin menubox
-    {
-            margin-top: -4rem;
-            border-radius: 2rem 2rem 0 0;
-            background-color: #f6f6f6;
-            z-index: 1;
-            position: relative;
-            margin-left: 0;
-            margin-right: 0;
-            padding-bottom: 5%;
-   }
-   @mixin menucard_title {
+&__list
+{   
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    padding-left: 2%;
-    padding-right: 2%;     
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0%;
+
     
-   
-   }
-
-   @mixin menucard_bubble
-   
+}
+&__listelmt
     {
-
-       
+    
         
-
-        @include animation_foodcard;
-   
-
-            background: white;
-            border: 0.1em solid white;
-            border-radius: 10px 10px;
-            box-shadow: 1px 1px 1px 0px;
-          
-
-            .menucard__text
-            {
-                padding: 2%;
-            }
-            .menucard__subtext
-            {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: row;
-                padding-top: 2%;
-            }
-            .menucard__name
-            {
-                font-weight: bold;
-            }
-            .menucard__price
-            {
-                font-weight: bold;
-                padding-left: 1%;
-            }
-   }
-  
-
-   @mixin selection_decoration {
-       content: "";
-    width: 2.5em;
-    height: 0.25em;
-    background-color: #99e2d0;
-    position: absolute;
-    top: 95%;
-    left: 0;
-   }
-   
- @mixin selection-appear {
-     /* Menucard Animation*/
-    .selection__starter--1
-    {
-        /* Menucard Animation*/
-        @include menucard-animation;   
+        padding-bottom: 0.6em;
         
-    }
-    .selection__starter--2
-    {
-        /* Menucard Animation*/
-        @include menucard-animation;
-        animation-delay: 0.4s;    
-    }
-    .selection__starter--3
-    {
-        /* Menucard Animation*/
-        @include menucard-animation;
-        animation-delay: 0.6s; 
-    }
-                            .selection__maincourse--1
-                            {
-                                /* Menucard Animation*/
-                                @include menucard-animation;   
-                                animation-delay: 0.8s; 
-                            }
-                            .selection__maincourse--2
-                            {
-                                /* Menucard Animation*/
-                                @include menucard-animation;
-                                animation-delay: 1s;    
-                            }
-                            .selection__maincourse--3
-                            {
-                                /* Menucard Animation*/
-                                @include menucard-animation;
-                                animation-delay: 1.2s; 
-                            }
+        
+    }    
+    
+&__link
+{
+text-decoration: none;
+color: white;
+padding-right: 1em;
 
-                                                    .selection__dessert--1
-                                                    {
-                                                        /* Menucard Animation*/
-                                                        @include menucard-animation;   
-                                                        animation-delay: 1.4s; 
-                                                    }
-                                                    .selection__dessert--2
-                                                    {
-                                                        /* Menucard Animation*/
-                                                        @include menucard-animation;
-                                                        animation-delay: 1.6s;    
-                                                    }
-                                                    .selection__dessert--3
-                                                    {
-                                                        /* Menucard Animation*/
-                                                        @include menucard-animation;
-                                                        animation-delay: 1.8s; 
-                                                    }
- }
+&:hover
+{
+    text-decoration: underline;
+}
+
+&:visited
+{
+    color: white;
+}
+}
+
+&__icon
+{
+padding-right: 0.5em;
+}
+}
+
+
+/*Image du restaurant */
+@mixin restaurant_background
+{
+width: 100%;
+max-width: 100%;
+object-fit: cover;
+height: 18em;
+}
+
+
+/*Conteneur zone principale */
+@mixin menubox
+{
+margin-top: -4rem;
+border-radius: 2rem 2rem 0 0;
+background-color: #f6f6f6;
+z-index: 1;
+position: relative;
+margin-left: 0;
+margin-right: 0;
+padding-bottom: 5%;
+}
+
+
+/*Entrée, Plats, Desert */
+@mixin menucard_title 
+{
+display: flex;
+flex-direction: row;
+align-items: baseline;
+justify-content: space-between;
+padding-left: 2%;
+padding-right: 2%;     
+
+
+}
+
+
+/* ::after "Entrées, Plats, Dessert" */
+@mixin selection_decoration 
+{
+content: "";
+width: 2.5em;
+height: 0.25em;
+background-color: #99e2d0;
+position: absolute;
+top: 95%;
+left: 0;
+}
+
+
+/*Bulle des plats */
+@mixin menucard_bubble
+{
+
+@include animation_foodcard;
+
+background: white;
+border: 0.1em solid white;
+border-radius: 10px 10px;
+box-shadow: 1px 1px 1px 0px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+
+
+.menucard__text
+{
+display: flex;
+flex-direction: column;
+}
+.menucard__subtext
+{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+padding-top: 2%;
+padding-left: 3%;
+margin: 0%;
+}
+.menucard__name
+{
+margin: 0;
+font-size: 1.1em;
+}
+.menucard__price
+{
+font-weight: bold;
+padding-left: 1%;
+display: flex;
+flex-direction: row;
+}
+}
+
+
+/*Icone de validation */
+@mixin check 
+{ 
+
+display: flex;
+align-items: center;
+justify-content: center;
+transition-duration: 0.5s;
+
+.checkBox
+{ 
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 100px;
+transform: translateX(1em);
+transition-duration: 0.5s;}
+
+.checkIcon {
+font-size: 2em;
+color: #99e2d0;
+background-color: white;
+border: 0.5em solid #99e2d0;
+transform: rotate(180deg);
+transition-duration: 0.5s;
+}
+
+}
+
+
+/*Proposistion des plats - delay*/
+@mixin selection-appear 
+{
+/* Menucard Animation*/
+.selection__starter--1
+{
+/* Menucard Animation*/
+@include menucard-animation;   
+
+}
+.selection__starter--2
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.4s;    
+}
+.selection__starter--3
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.6s; 
+}
+                .selection__maincourse--1
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;   
+                    animation-delay: 0.8s; 
+                }
+                .selection__maincourse--2
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;
+                    animation-delay: 1s;    
+                }
+                .selection__maincourse--3
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;
+                    animation-delay: 1.2s; 
+                }
+
+                                        .selection__dessert--1
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;   
+                                            animation-delay: 1.4s; 
+                                        }
+                                        .selection__dessert--2
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;
+                                            animation-delay: 1.6s;    
+                                        }
+                                        .selection__dessert--3
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;
+                                            animation-delay: 1.8s; 
+                                        }
+}
+

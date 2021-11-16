@@ -1,9 +1,7 @@
 @import "../../sass/main";
 
-/*Index.html*/
-
 body{
-    @include body_margin; 
+@include body_margin; 
 }
 
 
@@ -273,12 +271,7 @@ body{
         @include grid_responsive;
         @include selection-appear;
 
-        .menucard__title
-        {
-            font-size: 1.2em;
-            font-weight: bold;
-          
-        }
+       
                         .selection__starter
                         {
                             
@@ -312,9 +305,21 @@ body{
         @include menucard_bubble;
     
     }
-   
- 
+   .menucard__check
+   {
+       @include check;
+   }
 
+
+
+   /*Animation au survol des bulles*/
+   .menucard__bubble:hover .menucard__check .checkBox
+   {
+    transform: translateX(-5em);
+   }
+   
+
+/*Bouton de Commmande*/
     .btn__order
     {     
          @include btn_order;
@@ -333,19 +338,17 @@ body{
 
 
 
- @media all and (min-width : 768px)
 
+/*Responsive Design*/
+ @media all and (min-width : 768px)
  {
     @include display_768px;
  }
-
  @media all and (min-width : 1024px)
  {
    @include display_1024px;
-
  }
-
  @media all and (min-width : 1440px)
  {
-     @include display_1440px
+    @include display_1440px
  }
