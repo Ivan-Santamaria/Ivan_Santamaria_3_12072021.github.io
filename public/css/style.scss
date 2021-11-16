@@ -313,9 +313,19 @@ body{
 
 
    /*Animation au survol des bulles*/
+   .menucard__bubble:hover .menucard__check 
+   {
+    transform: translateX(-0em);
+   }
+
+   .menucard__bubble:hover .menucard__price
+   {
+    transform: translateX(-3em);
+    transition-duration: .5s;
+   }
    .menucard__bubble:hover .menucard__check .checkBox
    {
-    transform: translateX(-5em);
+    transform: rotate(0deg);
    }
    
 

@@ -185,6 +185,8 @@ left: 0;
 
 @include animation_foodcard;
 
+height: 100%;
+width: 100%;
 background: white;
 border: 0.1em solid white;
 border-radius: 10px 10px;
@@ -194,11 +196,13 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 overflow: hidden;
+text-overflow: ellipsis;
 
 
 .menucard__text
 {
 display: flex;
+flex: 1;
 flex-direction: column;
 }
 .menucard__subtext
@@ -218,9 +222,10 @@ font-size: 1.1em;
 .menucard__price
 {
 font-weight: bold;
-padding-left: 1%;
+margin-right:-7%;
 display: flex;
 flex-direction: row;
+transition-duration: .5s;
 }
 }
 
@@ -229,10 +234,14 @@ flex-direction: row;
 @mixin check 
 { 
 
-display: flex;
-align-items: center;
-justify-content: center;
-transition-duration: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(3em);
+    transition-duration: 0.5s;
+    background: #99e2d0;
+    padding: .5em;
+    height: 100%;
 
 .checkBox
 { 
@@ -240,18 +249,16 @@ display: flex;
 align-items: center;
 justify-content: center;
 border-radius: 100px;
-transform: translateX(1em);
+transform: rotate(-270deg);
 transition-duration: 0.5s;}
 
 .checkIcon {
-font-size: 2em;
-color: #99e2d0;
-background-color: white;
-border: 0.5em solid #99e2d0;
-transform: rotate(180deg);
-transition-duration: 0.5s;
+    font-size: 1.2em;
+    color: #99e2d0;
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.2em;
 }
-
 }
 
 
