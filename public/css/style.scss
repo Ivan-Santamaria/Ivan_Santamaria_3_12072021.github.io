@@ -43,13 +43,12 @@ body{
     
         .home__title
         {
-            font-size: 2.2em;
             padding: 0.5em;
             margin: 0em;
+            text-align: center;
         }
             .home__subtitle
             {
-                font-size: 1.3em;
                 padding: 0.5em;
             }
                 .btn__home
@@ -148,8 +147,9 @@ body{
     padding-bottom: 0em;
 
     .card {
+        flex: 1;
         background-color: #fff;
-        border-radius: 1rem;
+        border-radius: 1em;
         position: relative;
         text-decoration: none;
         color: inherit;
@@ -176,7 +176,7 @@ body{
         }
     }
     .card__img {
-        height: 12rem;
+        height: 10rem;
         width: 100%;
         border: 0 solid transparent;
         border-radius: 1rem 1rem 0 0;
@@ -192,8 +192,13 @@ body{
         justify-content: space-between;
         align-items: center;
         align-content: center;
-        padding-left: 1rem;
-        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-bottom: .5em;
+
+        .photoinfos__title
+        {
+            margin-bottom: 5%;
+        }
     }
 }
 .restaurant__card_unit
@@ -317,10 +322,21 @@ body{
    {
     transform: translateX(-0em);
    }
+   .menucard__check:hover
+       {
+        background: darken($color: $color-tertiary, $amount: 10%);
+
+        &:active
+            {
+            background: lighten($color: $color-tertiary, $amount: 15%);
+            }
+       }
+      
+   
 
    .menucard__bubble:hover .menucard__price
    {
-    transform: translateX(-3em);
+    transform: translateX(-5em);
     transition-duration: .5s;
    }
    .menucard__bubble:hover .menucard__check .checkBox

@@ -141,8 +141,8 @@ height: 18em;
 /*Conteneur zone principale */
 @mixin menubox
 {
-margin-top: -4rem;
-border-radius: 2rem 2rem 0 0;
+margin-top: -4em;
+border-radius: 2em 2em 0 0;
 background-color: #f6f6f6;
 z-index: 1;
 position: relative;
@@ -186,17 +186,17 @@ left: 0;
 @include animation_foodcard;
 
 height: 100%;
-width: 100%;
-background: white;
-border: 0.1em solid white;
-border-radius: 10px 10px;
-box-shadow: 1px 1px 1px 0px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-overflow: hidden;
-text-overflow: ellipsis;
+    width: 100%;
+    background: white;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-top: .5em;
+    padding-bottom: .5em;
 
 
 .menucard__text
@@ -211,22 +211,29 @@ display: flex;
 justify-content: space-between;
 flex-direction: row;
 padding-top: 2%;
-padding-left: 3%;
+padding-left: 1%;
 margin: 0%;
 }
 .menucard__name
 {
 margin: 0;
-font-size: 1.1em;
 }
 .menucard__price
 {
 font-weight: bold;
-margin-right:-7%;
+margin-right: -4.5em;
 display: flex;
 flex-direction: row;
 transition-duration: .5s;
 }
+}
+
+p, h5
+{
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;;
 }
 
 
@@ -237,10 +244,12 @@ transition-duration: .5s;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(3em);
+    transform: translateX(5em);
     transition-duration: 0.5s;
     background: #99e2d0;
     padding: .5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     height: 100%;
 
 .checkBox
@@ -284,6 +293,13 @@ animation-delay: 0.4s;
 @include menucard-animation;
 animation-delay: 0.6s; 
 }
+.selection__starter--4
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.6s; 
+}
+
                 .selection__maincourse--1
                 {
                     /* Menucard Animation*/

@@ -34,7 +34,16 @@
             }
     }
 
- 
+.restaurantbackground 
+{
+    height: 20em;
+}
+
+  .menubox
+  {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+  }
 }
 
 
@@ -46,6 +55,12 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
+    .menubox
+    {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
     .menucard
     {
        @include  menucard_grid;
@@ -56,6 +71,15 @@
 
   @mixin display_1440px 
   {
+    .restaurantbackground 
+    {
+        height: 21em;
+    }
+    .menubox
+    {
+        margin-left: 3em;
+        margin-right: 3em;
+    }
         .restaurant__cards 
         {
             padding-left: 10%;

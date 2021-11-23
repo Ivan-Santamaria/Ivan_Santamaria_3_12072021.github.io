@@ -8,17 +8,52 @@
 /*Entrée, Plats, Desert */
 /* ::after "Entrées, Plats, Dessert" */
 /*Bulle des plats */
-/*Icone de validation */
-/*Proposistion des plats - delay*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.header__logo, h1 {
+p, h5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*Icone de validation */
+/*Proposistion des plats - delay*/
+.header__logo, h1, h2 {
   font-family: "Shrikhand", "cursive";
   font-weight: normal;
 }
 
-h2, h3, h4, h5, h6, li, div, span, a {
+h3, h4, h5, h6, li, div, span, a {
   font-family: "Roboto", "sans-serif";
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.geoloc__text {
+  font-size: 1.15em;
+}
+
+.home__subtitle {
+  font-size: 1.1em;
+}
+
+.btn__home {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.photoinfos__title {
+  font-size: 1.2em;
+}
+
+.menucard__title {
+  font-size: 1.1em;
+}
+
+.menucard__name {
+  font-size: 1em;
 }
 
 /* Loader Animation*/
@@ -259,20 +294,17 @@ body {
   padding-bottom: 2em;
 }
 .home .home__title {
-  font-size: 2.2em;
   padding: 0.5em;
   margin: 0em;
+  text-align: center;
 }
 .home .home__subtitle {
-  font-size: 1.3em;
   padding: 0.5em;
 }
 .home .btn__home {
   text-decoration: none;
   border: 0;
   padding: 0.75em 1.5em;
-  font-weight: 500;
-  font-size: 1.1em;
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
@@ -366,8 +398,9 @@ body {
   padding-bottom: 0em;
 }
 .restaurant__cards .card {
+  flex: 1;
   background-color: #fff;
-  border-radius: 1rem;
+  border-radius: 1em;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -387,7 +420,7 @@ body {
   grid-area: 4/1/5/2;
 }
 .restaurant__cards .card__img {
-  height: 12rem;
+  height: 10rem;
   width: 100%;
   border: 0 solid transparent;
   border-radius: 1rem 1rem 0 0;
@@ -402,8 +435,11 @@ body {
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  padding-left: 1rem;
-  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+}
+.restaurant__cards .photoinfos .photoinfos__title {
+  margin-bottom: 5%;
 }
 
 .restaurant__card_unit {
@@ -431,8 +467,8 @@ body {
   bottom: 20%;
 }
 .menu__btn .menu__like--heart:hover {
-  -webkit-animation: fill 0.5s ease-in-out;
-          animation: fill 0.5s ease-in-out;
+  -webkit-animation: fill 0.8s ease-in-out;
+          animation: fill 0.8s ease-in-out;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -503,8 +539,8 @@ body {
 }
 
 .menubox {
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
+  margin-top: -4em;
+  border-radius: 2em 2em 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
@@ -612,6 +648,34 @@ body {
   }
 }
 .menucard .selection__starter--3 {
+  /* Menucard Animation*/
+  -webkit-animation: menucard_animation_appear 1s linear 0.2s 1;
+          animation: menucard_animation_appear 1s linear 0.2s 1;
+  transform: scale(0);
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@keyframes menucard_animation_appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes menucard_animation_appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menucard .selection__starter--4 {
   /* Menucard Animation*/
   -webkit-animation: menucard_animation_appear 1s linear 0.2s 1;
           animation: menucard_animation_appear 1s linear 0.2s 1;
@@ -851,15 +915,15 @@ body {
   height: 100%;
   width: 100%;
   background: white;
-  border: 0.1em solid white;
   border-radius: 10px 10px;
-  box-shadow: 1px 1px 1px 0px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .menucard__bubble:hover {
   transform: scale(1.02);
@@ -874,16 +938,15 @@ body {
   justify-content: space-between;
   flex-direction: row;
   padding-top: 2%;
-  padding-left: 3%;
+  padding-left: 1%;
   margin: 0%;
 }
 .menucard__bubble .menucard__name {
   margin: 0;
-  font-size: 1.1em;
 }
 .menucard__bubble .menucard__price {
   font-weight: bold;
-  margin-right: -7%;
+  margin-right: -4.5em;
   display: flex;
   flex-direction: row;
   transition-duration: 0.5s;
@@ -893,10 +956,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateX(3em);
+  transform: translateX(5em);
   transition-duration: 0.5s;
   background: #99e2d0;
   padding: 0.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   height: 100%;
 }
 .menucard__check .checkBox {
@@ -920,8 +985,15 @@ body {
   transform: translateX(0em);
 }
 
+.menucard__check:hover {
+  background: #71d7be;
+}
+.menucard__check:hover:active {
+  background: #d5f3eb;
+}
+
 .menucard__bubble:hover .menucard__price {
-  transform: translateX(-3em);
+  transform: translateX(-5em);
   transition-duration: 0.5s;
 }
 
@@ -940,8 +1012,6 @@ body {
   text-decoration: none;
   border: 0;
   padding: 0.75em 1.5em;
-  font-weight: 500;
-  font-size: 1.1em;
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
@@ -963,8 +1033,6 @@ body {
   text-decoration: none;
   border: 0;
   padding: 0.75em 1.5em;
-  font-weight: 500;
-  font-size: 1.1em;
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
@@ -1011,11 +1079,25 @@ body {
   .restaurant__cards .card__4 {
     grid-area: 2/2/3/3;
   }
+
+  .restaurantbackground {
+    height: 20em;
+  }
+
+  .menubox {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
 }
 @media all and (min-width: 1024px) {
   .howto .howto__steps {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .menubox {
+    margin-left: 2em;
+    margin-right: 2em;
   }
 
   .menucard {
@@ -1035,15 +1117,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__starter--1:hover {
     transform: scale(1.02);
@@ -1058,16 +1140,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__starter--1 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__starter--1 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1077,15 +1158,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__starter--2:hover {
     transform: scale(1.02);
@@ -1100,16 +1181,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__starter--2 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__starter--2 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1119,15 +1199,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__starter--3:hover {
     transform: scale(1.02);
@@ -1142,16 +1222,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__starter--3 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__starter--3 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1161,15 +1240,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__starter--3add:hover {
     transform: scale(1.02);
@@ -1184,16 +1263,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__starter--3add .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__starter--3add .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1206,15 +1284,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__maincourse--1:hover {
     transform: scale(1.02);
@@ -1229,16 +1307,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__maincourse--1 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__maincourse--1 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1248,15 +1325,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__maincourse--2:hover {
     transform: scale(1.02);
@@ -1271,16 +1348,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__maincourse--2 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__maincourse--2 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1290,15 +1366,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__maincourse--3:hover {
     transform: scale(1.02);
@@ -1313,16 +1389,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__maincourse--3 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__maincourse--3 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1335,15 +1410,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__dessert--1:hover {
     transform: scale(1.02);
@@ -1358,16 +1433,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__dessert--1 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__dessert--1 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1377,15 +1451,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__dessert--2:hover {
     transform: scale(1.02);
@@ -1400,16 +1474,15 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__dessert--2 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__dessert--2 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
@@ -1419,15 +1492,15 @@ body {
     height: 100%;
     width: 100%;
     background: white;
-    border: 0.1em solid white;
     border-radius: 10px 10px;
-    box-shadow: 1px 1px 1px 0px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
   .menucard .selection__dessert--3:hover {
     transform: scale(1.02);
@@ -1442,22 +1515,30 @@ body {
     justify-content: space-between;
     flex-direction: row;
     padding-top: 2%;
-    padding-left: 3%;
+    padding-left: 1%;
     margin: 0%;
   }
   .menucard .selection__dessert--3 .menucard__name {
     margin: 0;
-    font-size: 1.1em;
   }
   .menucard .selection__dessert--3 .menucard__price {
     font-weight: bold;
-    margin-right: -7%;
+    margin-right: -4.5em;
     display: flex;
     flex-direction: row;
     transition-duration: 0.5s;
   }
 }
 @media all and (min-width: 1440px) {
+  .restaurantbackground {
+    height: 21em;
+  }
+
+  .menubox {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
   .restaurant__cards {
     padding-left: 10%;
     padding-right: 10%;

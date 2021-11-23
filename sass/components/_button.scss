@@ -4,8 +4,6 @@
     text-decoration: none;
     border: 0;
     padding: .75em 1.5em;
-    font-weight: 500;
-    font-size: 1.1em;
     border-radius: 100px;
     color: #fff;
     background-color: #686868;
@@ -35,7 +33,7 @@
   
     &:hover
     {
-        animation: fill 0.5s ease-in-out;
+        animation: fill 0.8s ease-in-out;
         display: inline-block;
         opacity: 1;
         background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
@@ -48,9 +46,9 @@
   {
     display: block;
     opacity: 0.9;
+
        
   }
-
    
 }
 

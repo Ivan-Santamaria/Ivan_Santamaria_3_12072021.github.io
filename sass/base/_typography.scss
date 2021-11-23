@@ -6,11 +6,50 @@
 $logo-title-font:'Shrikhand', 'cursive';
 $font-text: 'Roboto', 'sans-serif';
 
-.header__logo, h1{
+.header__logo, h1,h2{
 font-family: $logo-title-font;
 font-weight: normal;
 }
-
-h2, h3, h4, h5, h6, li, div, span, a{
+h3, h4, h5, h6, li, div, span, a{
 font-family: $font-text;
+}
+
+
+h3{
+    font-size: 1.5em;
+}
+
+
+.geoloc__text
+{
+    font-size: 1.15em;
+}
+
+.home__subtitle
+{
+    font-size: 1.1em;
+}
+
+.btn__home
+{
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+
+
+
+.photoinfos__title
+{
+    font-size: 1.2em;
+}
+
+.menucard__title
+{
+    font-size: 1.1em;
+}
+
+.menucard__name
+{
+    font-size: 1em;
 }
