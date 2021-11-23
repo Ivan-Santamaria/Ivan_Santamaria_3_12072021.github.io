@@ -27,10 +27,7 @@
 
 
 
-@mixin heart_empty {
-
-
-  
+@mixin heart_empty { 
     &:hover
     {
         animation: fill 0.8s ease-in-out;

@@ -1,3 +1,10 @@
+
+/* Remise à zéro de l'affichage */
+@mixin body_margin 
+{
+margin: 0;
+padding:0;
+}
 /* Page de Chargement */
 @mixin loader_setup 
 { 
@@ -13,17 +20,7 @@ text-shadow: 0 0 7px;
 z-index: 9999;
 background-color: #f6f6f6a8;    
 @include loader_animation
-
 }
-
-
-/* Remise à zéro de l'affichage */
-@mixin body_margin 
-{
-margin: 0;
-padding:0;
-}
-
 
 /* Paramètre du header */
 @mixin header_setup 
@@ -65,8 +62,6 @@ cursor: pointer;
 }
 }
 }
-
-
 /* Paramètre du footer */
 @mixin footer_setup
 {
@@ -128,6 +123,10 @@ padding-right: 0.5em;
 }
 
 
+
+
+
+
 /*Image du restaurant */
 @mixin restaurant_background
 {
@@ -162,10 +161,7 @@ justify-content: space-between;
 padding-left: 2%;
 padding-right: 2%;     
 
-
 }
-
-
 /* ::after "Entrées, Plats, Dessert" */
 @mixin selection_decoration 
 {
@@ -177,16 +173,9 @@ position: absolute;
 top: 95%;
 left: 0;
 }
-
-
 /*Bulle des plats */
 @mixin menucard_bubble
-{
-
-@include animation_foodcard;
-
-height: 100%;
-    width: 100%;
+{ 
     background: white;
     border-radius: 10px 10px;
     box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 10%);
@@ -200,39 +189,30 @@ height: 100%;
     padding-bottom: .5em;
     padding-left: .5em;
 
-
-.menucard__text
-{
-display: flex;
-flex: 1;
-flex-direction: column;
+        .menucard__text
+        {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        }
+            .menucard__name
+            {
+            margin: 0;
+            }
+            .menucard__subtext
+            {
+            margin: 0%;
+            }
+       
+        .menucard__price
+        {
+        font-weight: bold;
+        margin-right: -3.5em;
+        display: flex;
+        flex-direction: row;
+        transition-duration: .5s;
+        }
 }
-.menucard__subtext
-{
-margin: 0%;
-}
-.menucard__name
-{
-margin: 0;
-}
-.menucard__price
-{
-font-weight: bold;
-margin-right: -3.5em;
-display: flex;
-flex-direction: row;
-transition-duration: .5s;
-}
-}
-
-.menucard__name, .menucard__subtext, .menucard__text
-{
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-
-}
-
 
 /*Icone de validation */
 @mixin check 
@@ -266,6 +246,8 @@ transition-duration: 0.5s;}
     padding: 0.2em;
 }
 }
+
+
 
 
 /*Proposistion des plats - delay*/

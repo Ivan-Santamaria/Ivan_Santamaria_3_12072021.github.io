@@ -1,7 +1,6 @@
 
 
 
-
 /* Loader Animation*/
 @mixin loader_animation
 {
@@ -174,17 +173,6 @@
 
 }
 }
-
-
-@mixin animation_foodcard {
-  
-  &:hover
-  { 
-    transform: scale(1.02);
-
-  }
-}
-
 /* Menucard Animation*/
 @mixin menucard-animation {
 
@@ -225,8 +213,6 @@
   
 }
 }
-
-
  /*  Heart Animation*/
 @keyframes fill { 
   0% {
