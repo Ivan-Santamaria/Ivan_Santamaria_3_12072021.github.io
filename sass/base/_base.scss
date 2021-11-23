@@ -194,9 +194,11 @@ height: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
     flex-wrap: nowrap;
     padding-top: .5em;
     padding-bottom: .5em;
+    padding-left: .5em;
 
 
 .menucard__text
@@ -207,11 +209,6 @@ flex-direction: column;
 }
 .menucard__subtext
 {
-display: flex;
-justify-content: space-between;
-flex-direction: row;
-padding-top: 2%;
-padding-left: 1%;
 margin: 0%;
 }
 .menucard__name
@@ -221,19 +218,19 @@ margin: 0;
 .menucard__price
 {
 font-weight: bold;
-margin-right: -4.5em;
+margin-right: -3.5em;
 display: flex;
 flex-direction: row;
 transition-duration: .5s;
 }
 }
 
-p, h5
+.menucard__name, .menucard__subtext, .menucard__text
 {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;;
 }
 
 

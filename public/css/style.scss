@@ -343,7 +343,11 @@ body{
    {
     transform: rotate(0deg);
    }
-   
+   .menucard__bubble:hover .menucard__text
+   {
+    margin-right: 30%;
+    transition-duration: .5s;
+   }
 
 /*Bouton de Commmande*/
     .btn__order
