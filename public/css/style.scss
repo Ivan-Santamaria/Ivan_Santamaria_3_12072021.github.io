@@ -38,7 +38,6 @@ body{
 
 
 
-
 /* Éléments page Index*/
 /*Acceuil*/
 .geoloc 
@@ -55,7 +54,7 @@ body{
         padding: 0.2em;
     }
 }
-.home
+.home /* Main button Mixin:_button-->L3<->L26*/
 {
     position: relative;
     display: flex;
@@ -66,6 +65,7 @@ body{
     align-items: center;
     background-color: $color-bg-grey;
     padding-bottom: 2em;
+    z-index: 0;
     
         .home__title
         {
@@ -250,13 +250,13 @@ body{
 
 
 /* Éléments pages Restaurants*/
-.restaurantbackground /*Image restaurants*/
+.restaurantbackground /*Image restaurants*/   /*Mixin:_base->L133<->L140*/
 {
 @include restaurant_background;
 }
 
 /*Zone choix des plats*/
-.menubox /*Conteneur ppal*/
+.menubox /*Conteneur ppal*/   /*Mixin:_base->L143<->L154*/
 {
     @include menubox;
 
@@ -271,9 +271,11 @@ body{
         flex-direction: row;
     }
 }
-.menucard /*Conteneur des menu*/
+.menucard /*Conteneur des menu*/ /*Mixin:_grid->L3<->L96*/   
+                                /*Responsive design: Mixin:_grid->L100<->L150 :_responsive->Display 1024px-> L64<->L68*/
+                                /*Mixin:_animation->L179<->L286*/
 {
-    @include grid_responsive;
+    @include menucard_grid;
     @include selection-appear;
 
     
@@ -305,55 +307,42 @@ body{
                     
 }
 .menucard__bubble/*Étiquette des plats*/
+                /*Mixin:_base->L179<->L218*/  
 {
     @include menucard_bubble;
 
 }
-    /*Overflow*/
-    .menucard__name, .menucard__subtext, .menucard__text 
-    {
+
+
+/*Overflow bulles*/
+.menucard__name, .menucard__subtext, .menucard__text 
+{
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
-
-    }
-    /*Animation au survol des bulles*/
-    .menucard__bubble:hover .menucard__check /*Glissement validation*/
-    {
-        transform: translateX(-0em);
-    } 
-    .menucard__bubble:hover .menucard__price /*Glissement validation*/
-    {
-        transform: translateX(-5em);
-        transition-duration: .5s;
-    }
-    .menucard__bubble:hover .menucard__check .checkBox /*Rotation validation*/
-    {
-        transform: rotate(0deg);
-    }
-    .menucard__bubble:hover .menucard__text /*Glissement validation*/
-    {
-        margin-right: 30%;
-        transition-duration: .5s;
-    }
+}
+  
 
     
 .menucard__check /*Validation des plats*/
+                /*Mixin:_base->L220<->L251*/
 {
     @include check;
-}  
-    .menucard__check:hover /*Témoin de validation*/
-   {
-    background: darken($color: $color-tertiary, $amount: 10%);
+            &:hover /*Témoin de validation*/
+                    {
+                        background: darken($color: $color-tertiary, $amount: 5%);
 
-    &:active
-        {
-        background: lighten($color: $color-tertiary, $amount: 15%);
-        }
-   }
+                        &:active
+                            {
+                            background: lighten($color: $color-tertiary, $amount: 2%);
+                            }
+                    }
+}  
+    
 
 
 .btn__order /*Bouton de Commmande*/
+            /*Mixin:_button->L54<->65*/
 {     
         @include btn_order;
         
@@ -365,15 +354,15 @@ body{
   
    
 /*Responsive Design*/
- @media all and (min-width : 768px)
+ @media all and (min-width : 768px) /*Mixin:_responsive->L3<->47*/
  {
     @include display_768px;
  }
- @media all and (min-width : 1024px)
+ @media all and (min-width : 1024px) /*Mixin:_responsive->L50<->69*/
  {
    @include display_1024px;
  }
- @media all and (min-width : 1440px)
+ @media all and (min-width : 1440px) /*Mixin:_responsive->L71<->87*/
  {
     @include display_1440px
  }

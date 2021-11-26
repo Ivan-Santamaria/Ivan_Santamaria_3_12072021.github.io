@@ -37,7 +37,7 @@
     0% {
       animation-timing-function: ease-in;
       opacity: 1;
-      transform: translateY(-45px);
+      transform: translateY(-25px);
     }
   
     24% {
@@ -46,22 +46,22 @@
   
     40% {
       animation-timing-function: ease-in;
-      transform: translateY(-24px);
+      transform: translateY(-15px);
     }
   
     65% {
       animation-timing-function: ease-in;
-      transform: translateY(-12px);
+      transform: translateY(-8px);
     }
   
     82% {
       animation-timing-function: ease-in;
-      transform: translateY(-6px);
+      transform: translateY(-4px);
     }
   
     93% {
       animation-timing-function: ease-in;
-      transform: translateY(-4px);
+      transform: translateY(-2px);
     }
   
     25%,
@@ -83,7 +83,7 @@
     0% {
         animation-timing-function: ease-in;
         opacity: 1;
-        transform: translateY(-45px);
+        transform: translateY(-25px);
       }
     
       24% {
@@ -92,22 +92,22 @@
     
       40% {
         animation-timing-function: ease-in;
-        transform: translateY(-24px);
+        transform: translateY(-15px);
       }
     
       65% {
         animation-timing-function: ease-in;
-        transform: translateY(-12px);
+        transform: translateY(-8px);
       }
     
       82% {
         animation-timing-function: ease-in;
-        transform: translateY(-6px);
+        transform: translateY(-4px);
       }
     
       93% {
         animation-timing-function: ease-in;
-        transform: translateY(-4px);
+        transform: translateY(-2px);
       }
     
       25%,
@@ -165,7 +165,7 @@
     100%
     {
      opacity: 0; 
-      z-index: -9999;
+      z-index: -999;
      display: none;
     }
   }
@@ -173,7 +173,78 @@
 
 }
 }
+
+
+
 /* Menucard Animation*/
+/*Proposistion des plats - delay*/
+@mixin selection-appear 
+{
+/* Menucard Animation*/
+.selection__starter--1
+{
+/* Menucard Animation*/
+@include menucard-animation;   
+
+}
+.selection__starter--2
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.4s;    
+}
+.selection__starter--3
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.6s; 
+}
+.selection__starter--4
+{
+/* Menucard Animation*/
+@include menucard-animation;
+animation-delay: 0.6s; 
+}
+
+                .selection__maincourse--1
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;   
+                    animation-delay: 0.8s; 
+                }
+                .selection__maincourse--2
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;
+                    animation-delay: 1s;    
+                }
+                .selection__maincourse--3
+                {
+                    /* Menucard Animation*/
+                    @include menucard-animation;
+                    animation-delay: 1.2s; 
+                }
+
+                                        .selection__dessert--1
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;   
+                                            animation-delay: 1.4s; 
+                                        }
+                                        .selection__dessert--2
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;
+                                            animation-delay: 1.6s;    
+                                        }
+                                        .selection__dessert--3
+                                        {
+                                            /* Menucard Animation*/
+                                            @include menucard-animation;
+                                            animation-delay: 1.8s; 
+                                        }
+}
+/*Animation*/
 @mixin menucard-animation {
 
   animation: menucard_animation_appear 1s linear 0.2s 1 ;
@@ -213,6 +284,8 @@
   
 }
 }
+
+
  /*  Heart Animation*/
 @keyframes fill { 
   0% {
@@ -224,4 +297,29 @@
   100% {
     opacity: 1;
   }
+}
+
+
+
+
+/*Animation au survol des bulles*/
+
+
+.menucard__bubble:hover .menucard__check /*Glissement validation*/
+{
+    transform: translateX(-0em);
+} 
+.menucard__bubble:hover .menucard__price /*Glissement validation*/
+{
+    transform: translateX(-5em);
+    transition-duration: .5s;
+}
+.menucard__bubble:hover .menucard__check .checkBox /*Rotation validation*/
+{
+    transform: rotate(0deg);
+}
+.menucard__bubble:hover .menucard__text /*Glissement validation*/
+{
+    margin-right: 30%;
+    transition-duration: .5s;
 }

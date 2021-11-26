@@ -1,6 +1,7 @@
 
 
-@mixin display_768px {
+@mixin display_768px 
+{
     .howto{
         padding-right: 1%;
         padding-left: 1%;
@@ -34,10 +35,10 @@
             }
     }
 
-.restaurantbackground 
-{
+    .restaurantbackground 
+    {
     height: 20em;
-}
+    }
 
   .menubox
   {
@@ -47,7 +48,8 @@
 }
 
 
-@mixin display_1024px {
+@mixin display_1024px 
+{
    
 
     .howto .howto__steps 
@@ -60,30 +62,30 @@
         margin-left: 2em;
         margin-right: 2em;
     }
-
     .menucard
     {
-       @include  menucard_grid;
-    }
+       @include  grid_responsive;
+       
+    } 
 }
 
 
   @mixin display_1440px 
-  {
-    .restaurantbackground 
+{
+.restaurantbackground 
+{
+    height: 21em;
+}
+.menubox
+{
+    margin-left: 3em;
+    margin-right: 3em;
+}
+    .restaurant__cards 
     {
-        height: 21em;
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    .menubox
-    {
-        margin-left: 3em;
-        margin-right: 3em;
-    }
-        .restaurant__cards 
-        {
-            padding-left: 10%;
-            padding-right: 10%;
-        }
-    }
+}
 
 
