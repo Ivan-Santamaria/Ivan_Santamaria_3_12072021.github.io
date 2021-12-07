@@ -300,7 +300,20 @@ animation-delay: 0.6s;
 }
 
 
-
+.howto__step:hover
+{
+color: #9356DC;
+background-color:#f7f0ff ;
+transition-duration: .3s;
+cursor: pointer;
+}
+.howto__step:hover .howto__icon
+{
+color: #9356DC;
+background-color:#f7f0ff ;
+transition-duration: .3s;
+cursor: pointer;
+}
 
 /*Animation au survol des bulles*/
 
