@@ -29,8 +29,8 @@ body{
 }
 .card__btn /* Bouton Coeur pages restaurant*/ /*Mixin:_button->L30<->L53 ::: Animation:_animation->L216<->L227*/
 {
-    top: 2.5%;
-    padding-right: 2%;
+    padding-top: 1.5%;
+    padding-right: 4.5%;
     padding-left: 0;
     bottom: 0;
 }
@@ -86,7 +86,7 @@ body{
 
 .howto
 {  
-     position: relative;
+    position: relative;
     padding-left: 3%;
     padding-right: 3%;
     padding-bottom: 5%;
@@ -131,6 +131,7 @@ body{
     .howto__icon
     {
             margin-right: 1em;
+            padding-left: 1em;
             color: #7e7e7e;     
     }
 }

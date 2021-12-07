@@ -136,14 +136,20 @@
     0.05%
       {
        opacity: 0;
-       z-index: -9998;
+       z-index: 9999;
+       display: none;
+      }
+      0.0505%
+      {
+       opacity: 0;
+       z-index: -9999;
        display: none;
       }
 
       100%
       {
        opacity: 0; 
-        z-index: -999;
+        z-index: -9999;
        display: none;
       }
     }

@@ -10,10 +10,11 @@ $font-text: 'Roboto', 'sans-serif';
 {
 font-family: $logo-title-font;
 font-weight: normal;
-text-align: center;
 margin: 0em;
 }
-
+h1{
+    text-align: center;
+}
 h3, h4, h5, h6, li, div, span, a
 {
 font-family: $font-text;

@@ -14,8 +14,11 @@
 .header__logo, h1, h2 {
   font-family: "Shrikhand", "cursive";
   font-weight: normal;
-  text-align: center;
   margin: 0em;
+}
+
+h1 {
+  text-align: center;
 }
 
 h3, h4, h5, h6, li, div, span, a {
@@ -245,12 +248,17 @@ body {
   }
   0.05% {
     opacity: 0;
-    z-index: -9998;
+    z-index: 9999;
+    display: none;
+  }
+  0.0505% {
+    opacity: 0;
+    z-index: -9999;
     display: none;
   }
   100% {
     opacity: 0;
-    z-index: -999;
+    z-index: -9999;
     display: none;
   }
 }
@@ -365,8 +373,8 @@ body {
 }
 
 .card__btn {
-  top: 2.5%;
-  padding-right: 2%;
+  padding-top: 1.5%;
+  padding-right: 4.5%;
   padding-left: 0;
   bottom: 0;
 }
@@ -467,6 +475,7 @@ body {
 }
 .howto__step .howto__icon {
   margin-right: 1em;
+  padding-left: 1em;
   color: #7e7e7e;
 }
 
@@ -1522,6 +1531,10 @@ body {
   }
   .menucard .selection__dessert--3 {
     grid-area: 4/3/5/4;
+  }
+
+  .btn__order {
+    padding-top: 0%;
   }
 }
 @media all and (min-width: 1440px) {
